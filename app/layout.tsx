@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Rye ,Source_Sans_3} from "next/font/google";
 import "./globals.css";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const rye = Rye({
+  variable: "--font-rye",
   subsets: ["latin"],
-});
+  weight: "400",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const sans3 = Source_Sans_3({
+  variable: "--font-source-sans-3",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${rye.variable} ${sans3.variable} antialiased`}
       >
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
