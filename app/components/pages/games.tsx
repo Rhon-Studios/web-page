@@ -1,16 +1,19 @@
+import getCharacters from "@/app/hooks/getCharacters";
+import Gallery from "../ui/gallery";
+
 export default function Games() {
+  const Characters = getCharacters();
   return (
     <section
       id="games"
       className="m-auto min-h-section flex flex-col items-center justify-center text-center gap-12 px-6 bg-gradient-to-b from-gray-50 to-white"
     >
-      <h2 className="font-rye text-5xl text-main tracking-wider">Tonkori</h2>
+      <h2 className="font-rye text-5xl text-main tracking-wider py-10">Tonkori</h2>
       <p className="text-lg max-w-2xl text-foreground/80">
         Tonkori is a story-driven RPG set in a vibrant medieval world filled with mystery, friendship, and fate.  
         Experience the journey through the eyes of different heroes each with their own choices, memories, and paths that shape the story.
       </p>
 
-      {/* //galeria */}
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mt-10 max-w-5xl">
         <div className="md:w-1/2">
@@ -27,6 +30,9 @@ export default function Games() {
           </p>
         </div>
       </div>
+      {/* //galeria */}
+      <h2 className="font-rye text-5xl text-main tracking-wider py-10">Meet your companions</h2>
+      <Gallery images={Characters} />
     </section>
   );
 }
