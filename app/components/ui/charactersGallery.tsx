@@ -13,7 +13,7 @@ export type GalleryProps = {
   readonly images: readonly GalleryImage[];
 };
 
-export default function Gallery({ images }: GalleryProps) {
+export default function CharactersGallery({ images }: GalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selected = images[selectedIndex];
 
@@ -59,7 +59,7 @@ export default function Gallery({ images }: GalleryProps) {
           />
         </div>
         <div className="md:w-1/2 flex flex-col gap-4">
-          <h3 className="text-2xl font-bold text-main">{selected.name}</h3>
+          <h3>{selected.name}</h3>
           <p className="text-foreground/80">{selected.description}</p>
         </div>
       </div>

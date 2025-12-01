@@ -1,12 +1,15 @@
 import getCharacters from "@/app/hooks/getCharacters";
-import Gallery from "../ui/gallery";
+import CharactersGallery from "../ui/charactersGallery";
+import MainGallery from "../ui/mainGallery";
+import getMains from "@/app/hooks/getMains";
 
 export default function Games() {
   const Characters = getCharacters();
+  const Mains = getMains();
   return (
     <section
       id="games"
-      className="m-auto min-h-section flex flex-col items-center justify-center text-center gap-12 px-6 bg-gradient-to-b from-gray-50 to-white"
+      className="m-auto min-h-section flex flex-col items-center justify-center text-center gap-12 px-6 bg-linear-to-b from-gray-50 to-white"
     >
       <h2 className="font-rye text-5xl text-main tracking-wider py-10">Tonkori</h2>
       <p className="text-lg max-w-2xl text-foreground/80">
@@ -20,7 +23,7 @@ export default function Games() {
           {/* Video???*/}
         </div>
         <div className="md:w-1/2 text-left md:text-justify">
-          <h3 className="text-2xl font-bold mb-3 text-main">A World of Stories</h3>
+          <h3>A World of Stories</h3>
           <p className="text-foreground/80 mb-4">
             Forge bonds, uncover ancient secrets and decide the fate of kingdoms through choices that matter.  
             Every companion you meet has a story worth listening to and a role to play in yours.
@@ -31,8 +34,15 @@ export default function Games() {
         </div>
       </div>
       {/* //galeria */}
-      <h2 className="font-rye text-5xl text-main tracking-wider py-10">Meet your companions</h2>
-      <Gallery images={Characters} />
+      <h2>Choose your hero</h2>
+      <MainGallery images={Mains}/>
+
+
+      <h2>Meet your companions</h2>
+      <CharactersGallery images={Characters} />
+
+      <h2>Explore Tonkori&apos;s world</h2>
+
     </section>
   );
 }

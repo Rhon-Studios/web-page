@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Rye ,Source_Sans_3} from "next/font/google";
+import { Rye, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
+import LanguageProvider from "./context/LanguageProvider";
+import ClientWrapper from "./clientWrap";
 
 const rye = Rye({
   variable: "--font-rye",
   subsets: ["latin"],
   weight: "400",
-})
+});
 
 const sans3 = Source_Sans_3({
   variable: "--font-source-sans-3",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Rhon Studios",
@@ -27,12 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${rye.variable} ${sans3.variable} antialiased`}
-      >
-        <Header/>
-        {children}
-        <Footer/>
+      <body className={`${rye.variable} ${sans3.variable} antialiased`}>
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

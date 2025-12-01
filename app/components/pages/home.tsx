@@ -1,4 +1,5 @@
-export default function MainPage() {
+export default function MainPage(text: LanguageProp) {
+  const t = text.text.home
   return (
     <section
       id="home"
@@ -9,10 +10,10 @@ export default function MainPage() {
 
       <div className="relative z-10 flex flex-col items-center justify-center">
         <h2 className="text-7xl font-bold max-w-[20ch] font-rye pb-10">
-          Creating worlds that <u>stay</u> with you
+          {t.title[0]}<u>{t.title[1]}</u>{t.title[2]}
         </h2>
         <p className="text-2xl max-w-[45ch] font-bold opacity-80 [text-shadow:2px_2px_0_#fff]">
-          Dive into unique stories, strange characters and unforgettable vibes.
+         {t.description}
         </p>
       </div>
 

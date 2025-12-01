@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import ButtonLanguage from "../ui/languageButton";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -15,9 +16,10 @@ export default function Header() {
       </div>
 
       <nav className={`flex-col md:flex-row md:flex absolute md:static bg-white left-0 w-full md:w-auto top-[4rem] md:top-auto ${open ? 'flex' : 'hidden'} md:space-x-6 space-y-3 md:space-y-0 p-4 md:p-0 text-center`}>
+        <Link href="#games" onClick={() => setOpen(false)}>Tonkori</Link>
         <Link href="#about" onClick={() => setOpen(false)}>About</Link>
-        <Link href="#games" onClick={() => setOpen(false)}>Games</Link>
         <Link href="#contact" onClick={() => setOpen(false)}>Contact</Link>
+        <ButtonLanguage/>
       </nav>
 
       <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">

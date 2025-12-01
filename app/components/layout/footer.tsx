@@ -12,8 +12,8 @@ export default function Footer() {
           <Link href="#contact" className="hover:text-gray-300">Contact</Link>
         </nav>
         <div className="flex gap-6 text-2xl">
-          <Link href="https://instagram.com" target="_blank"><FaInstagram /></Link>
           <Link href="mailto:info@drowngames.com"><FaEnvelope /></Link>
+          <Link href="https://instagram.com" target="_blank"><FaInstagram /></Link>
           <Link href="https://twitter.com" target="_blank"><FaTwitter /></Link>
         </div>
         <p className="text-sm text-gray-400">© {new Date().getFullYear()} Rhon Studios. All rights reserved.</p>
