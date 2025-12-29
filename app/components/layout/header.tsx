@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center w-full h-header sticky top-0 bg-white z-50 px-4">
       <div className="flex items-center">
-        <Image src="/logo_lorem.jpg" alt="Logo" width={60} height={60}/>
+        <Image src="/Logo.png" alt="Logo" width={60} height={60}/>
         <Link href="#"><h1 className="titulo ml-2">Rhon Studios</h1></Link>
       </div>
 
