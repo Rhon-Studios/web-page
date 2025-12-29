@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Rye, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
-import LanguageProvider from "./context/LanguageProvider";
 import ClientWrapper from "./clientWrap";
 
 const rye = Rye({
