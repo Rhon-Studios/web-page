@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 
-export default function Contact() {
+export default function Contact(text: Readonly<LanguageProp>) {
+  const t = text.text.contact
   return (
     <section
       id="contact"
       className="m-auto min-h-section flex flex-col items-center justify-center text-center gap-8"
     >
-      <h2 className="font-rye text-4xl text-main">Get in Touch</h2>
+      <h2 className="font-rye text-4xl text-main">{t.subtitle}</h2>
       <div className="md:flex md:flex-row flex-col w-full max-w-4xl justify-between items-center text-left">
         <div className="w-full pb-10 md:w-1/2 text-lg text-gray-700 pr-6 md:text-left text-center">
-          <p>Have questions, ideas, or just want to say hi?</p>
-          <p>We’d love to hear from you!</p>
+          <p>{t.text}</p>
         </div>
         <div className="w-full md:w-1/2 flex flex-col gap-4 text-lg items-center md:items-start md:pl-20">
           <Link

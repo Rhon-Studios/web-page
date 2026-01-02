@@ -1,4 +1,4 @@
-export default function MainPage(text: LanguageProp) {
+export default function MainPage(text: Readonly<LanguageProp>) {
   const t = text.text.home
   return (
     <section

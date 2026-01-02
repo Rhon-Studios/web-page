@@ -36,7 +36,7 @@ export default function CharactersGallery({ images }: GalleryProps) {
               i === selectedIndex ? "border-main" : "border-transparent"
             }`}
             onClick={() => setSelectedIndex(i)}
-            onKeyDown={e => handleKey(e, i)}
+            onKeyDown={(e) => handleKey(e, i)}
           >
             <Image
               src={img.src}

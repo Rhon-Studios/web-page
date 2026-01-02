@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <main className="max-w-screen m-auto items-center justify-center">
       <MainPage text={text}/>
-      <Games/>
-      <About/>
-      <Contact />
+      <Games text={text}/>
+      <About text={text}/>
+      <Contact text={text}/>
     </main>
   );
 }

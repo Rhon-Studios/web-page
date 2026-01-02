@@ -3,7 +3,8 @@ import CharactersGallery from "../ui/charactersGallery";
 import MainGallery from "../ui/mainGallery";
 import getMains from "@/app/hooks/getMains";
 
-export default function Games() {
+export default function Games(text: Readonly<LanguageProp>) {
+  const t = text.text.games
   const Characters = getCharacters();
   const Mains = getMains();
   return (
@@ -13,8 +14,7 @@ export default function Games() {
     >
       <h2 className="font-rye text-5xl text-main tracking-wider py-10">Tonkori</h2>
       <p className="text-lg max-w-2xl text-foreground/80">
-        Tonkori is a story-driven RPG set in a vibrant medieval world filled with mystery, friendship, and fate.  
-        Experience the journey through the eyes of different heroes each with their own choices, memories, and paths that shape the story.
+        {t.text1}
       </p>
 
 
@@ -23,13 +23,12 @@ export default function Games() {
           {/* Video???*/}
         </div>
         <div className="md:w-1/2 text-left md:text-justify">
-          <h3>A World of Stories</h3>
+          <h3>{t.subtitle}</h3>
           <p className="text-foreground/80 mb-4">
-            Forge bonds, uncover ancient secrets and decide the fate of kingdoms through choices that matter.  
-            Every companion you meet has a story worth listening to and a role to play in yours.
+            {t.text2}
           </p>
           <p className="text-foreground/70 italic">
-            Developed with passion using Godot, Tonkori blends heartfelt storytelling with hand-crafted fantasy.
+            {t.textdev}
           </p>
         </div>
       </div>
